@@ -1,0 +1,15 @@
+#!/bin/python
+import subprocess
+import socket
+
+def run(command):
+   output = subprocess.check_output(command, shell=True).strip()
+   output = output.decode('utf-8')
+   return output
+
+try:
+    ssid = run("iwgetid -r")
+    wifi = "直"
+    print(wifi + " "  + ssid)
+except:
+    print("睊 Disconnected")

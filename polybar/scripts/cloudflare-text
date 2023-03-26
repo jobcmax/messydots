@@ -1,0 +1,22 @@
+#!/bin/python
+import subprocess
+
+def run(command):
+   output = subprocess.check_output(command, shell=True).strip()
+   output = output.decode('utf-8')
+   return output
+   
+status = run("warp-cli status | grep Status")
+statusFix = status[15:24]
+
+if statusFix == "Connected":
+    print("" + " " + "on")
+
+if statusFix == "Disconnec":
+    print("" + " " + "off")    
+
+if statusFix == "Connectin":
+    print("" + " " + "wait..")    
+
+if statusFix == "No networ":
+    print("" + " " + "睊")
