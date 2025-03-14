@@ -237,7 +237,7 @@ exec_always {
 
 exec nm-applet
 exec waybar
-exec swaybg -i wallpaper/reading.png -m center
+exec swaybg -i ~/wallpaper/urwall.png -m center
 
 smart_borders on
 corner_radius 6
