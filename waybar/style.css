@@ -1,0 +1,127 @@
+@define-color bg #101419;
+@define-color bg-alt #1f2328;
+@define-color fg #dee1e6;
+@define-color primary #74bee9;
+@define-color secondary #70a5eb;
+@define-color alert #fc7b81;
+@define-color success #78dba9;
+@define-color warning #f1cf8a;
+@define-color disabled #566685;
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-size: 14px;
+    font-family: "Geist";
+    padding: 0;
+}
+
+window#waybar {
+    background: @bg;
+    font-family: "Geist";
+    font-weight: 500;
+    border: 0px solid @bg-alt;
+}
+
+menu label {
+    font-family: "Geist";
+    font-weight: 500;
+    padding: 4px 0px;
+}
+
+menu menuitem {
+    margin: 0px 4px;
+    border-radius: 4px;
+}
+
+tooltip {
+    background-color: @bg;
+    border: 2px solid @bg-alt;
+    border-radius: 4px;
+    font-family: "Geist";
+}
+
+#clock,
+#tray,
+#cpu,
+#memory,
+#battery,
+#network,
+#pulseaudio,
+#backlight {
+    margin: 6px 8px 6px 4px;
+    padding: 0px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+#pulseaudio {
+    background-color: @secondary;
+    color: @bg;
+}
+
+#backlight {
+    background-color: @warning;
+    color: @bg;
+}
+
+#clock {
+    color: @fg;
+    margin-right: 4px;
+}
+
+#custom-rofi {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 18px;
+}
+
+#workspaces {
+    background-color: @bg;
+    margin: 0px 0px 0px 0px;
+}
+
+#workspaces button {
+    all: initial;
+    min-width: 0;
+    padding: 0px 6px;
+    color: @disabled;
+    font-weight: 600;
+    font-family: "Geist";
+}
+
+#workspaces button.focused {
+    color: @fg;
+}
+
+#workspaces button.urgent {
+    color: @alert;
+}
+
+#clock {
+    background-color: @bg;
+    color: @fg;
+    font-weight: 700;
+}
+
+#tray {
+    background-color: @bg-alt;
+    border-radius: 4px;
+    padding: 0px 8px;
+}
+
+#battery {
+    background-color: @success;
+    color: @bg;
+    font-weight: 700;
+    min-width: 36px;
+    border-radius: 4px;
+}
+
+#battery.warning {
+    background-color: @warning;
+}
+
+#battery.critical {
+    background-color: @alert;
+}
