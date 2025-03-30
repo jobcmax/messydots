@@ -15,13 +15,14 @@
     font-size: 14px;
     font-family: "Geist";
     padding: 0;
+    margin: 0;
 }
 
 window#waybar {
     background: @bg;
     font-family: "Geist";
     font-weight: 500;
-    border: 0px solid @bg-alt;
+    border-bottom: 2px solid @bg-alt;
 }
 
 menu label {
@@ -40,35 +41,26 @@ tooltip {
     border: 2px solid @bg-alt;
     border-radius: 4px;
     font-family: "Geist";
+    padding: 8px;
 }
 
 #clock,
 #tray,
-#cpu,
-#memory,
-#battery,
-#network,
-#pulseaudio,
-#backlight {
-    margin: 6px 8px 6px 4px;
-    padding: 0px 8px;
+#battery {
+    margin: 6px 0px 6px 0px;
     border-radius: 4px;
     font-weight: 700;
 }
 
 #pulseaudio {
-    background-color: @secondary;
-    color: @bg;
-}
-
-#backlight {
-    background-color: @warning;
-    color: @bg;
+    color: @fg;
+    margin: 3px;
+    margin-right: 14px;
 }
 
 #clock {
     color: @fg;
-    margin-right: 4px;
+    margin-right: 12px;
 }
 
 #custom-rofi {
@@ -78,13 +70,13 @@ tooltip {
 
 #workspaces {
     background-color: @bg;
-    margin: 0px 0px 0px 0px;
+    margin: 6px;
 }
 
 #workspaces button {
     all: initial;
+    margin-right: 12px;
     min-width: 0;
-    padding: 0px 6px;
     color: @disabled;
     font-weight: 600;
     font-family: "Geist";
@@ -105,23 +97,23 @@ tooltip {
 }
 
 #tray {
-    background-color: @bg-alt;
     border-radius: 4px;
-    padding: 0px 8px;
+    padding: 0px 4px;
 }
 
 #battery {
-    background-color: @success;
-    color: @bg;
+    margin: 6px 12px;
+    color: @success;
     font-weight: 700;
     min-width: 36px;
     border-radius: 4px;
 }
 
 #battery.warning {
-    background-color: @warning;
+    color: @warning;
 }
 
 #battery.critical {
-    background-color: @alert;
+    color: @alert;
 }
+

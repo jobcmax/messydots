@@ -22,8 +22,7 @@
     "modules-right": [
         "tray",
         "battery",
-        "pulseaudio",
-        "backlight"
+        "pulseaudio"
     ],
 
     "sway/workspaces": {
@@ -80,63 +79,36 @@
         "escape": true
     },
 
-    "cpu": {
-        "format": "cpu {usage}%",
-        "interval": 2,
-
-        "states": {
-            "critical": 90
-        }
-    },
-
     "custom/rofi": {
         "format": "{} <span color='#70a5eb'></span> ",
         "on-click": "rofi -show drun -show-icons"
     },
 
-    "custom/thing": {
-        "format": "{}<span size='large'>|  </span>"
-    },
-
-    "memory": {
-        "format": "mem {percentage}%",
-        "interval": 2,
-
-        "states": {
-            "critical": 80
-        }
-    },
-
     "battery": {
-        "format": "<span size='x-large' rise='-2000'>{icon}</span>{capacity}",
+        "format": "<span size='x-large' rise='-2000'>{icon}</span>  <span foreground='#dee1e6'>{capacity}</span>",
         "interval": 5,
         "states": {
             "warning": 70,
             "critical": 20
         },
         "format-icons": {
-            "charging": ["󱐋 "]
+            "charging": ["󰂄"],
+            "discharging": ["󰁹"]
         },
+        "on-click": "~/Documents/code/cc-gtk4/main.py toggle",
         "tooltip": false
     },
 
     "pulseaudio": {
-        "scroll-step": 5,
-        "max-volume": 150,
-        "format": "<span size='x-large' rise='-2000'>{icon}</span>{volume}%",
-        "format-muted": "<span size='x-large' rise='-2000'>󰖁 </span>MUTED",
+        "scroll-step": 0,
+        "max-volume": 110,
+        "format": "<span size='xx-large' rise='-2000'>{icon}</span>",
+        "format-muted": "<span size='xx-large' rise='-5000'>󰖁</span>",
         "format-icons": {
-            "default": ["󰕿 ", "󰖀 ", "󰕾 "]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "nospacing": 1,
-        "on-click": "amixer set Master toggle",
-        "tooltip": false
-    },
-
-    "backlight": {
-        "scroll-step": 5,
-        "format": "<span size='x-large' rise='-2000'>󰃠 </span> {percent}%",
-        "nospacing": 1,
+        "on-click": "~/Documents/code/cc-gtk4/main.py toggle",
         "tooltip": false
     },
 }
