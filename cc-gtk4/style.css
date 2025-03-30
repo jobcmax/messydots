@@ -1,0 +1,113 @@
+@define-color bg #101419;
+@define-color bg-alt #1f2328;
+@define-color fg #dee1e6;
+@define-color primary #74bee9;
+@define-color secondary #70a5eb;
+@define-color alert #fc7b81;
+@define-color success #78dba9;
+@define-color warning #f1cf8a;
+@define-color disabled #566685;
+
+* {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Geist";
+}
+
+#window {
+    border-radius: 8px;
+    border: 2px solid @bg-alt;
+}
+
+.vbox {
+    margin: 24px;
+}
+
+.hbox1 {
+
+}
+
+.bat_icon {
+    font-size: 24px;
+    padding: 0px 8px;
+}
+
+.full_bat {
+    color: @success;
+}
+
+.mid_bat {
+    color: @warning;
+}
+
+.low_bat {
+    color: @alert;
+}
+
+.hbox2 {
+
+}
+
+.bright_icon {
+    font-size: 20px;
+    padding: 0px 8px;
+    margin-left: -2px; /* offset nerd icon */
+    color: @warning;
+}
+
+.bright_slider trough {
+    margin-left: 11px; /* line up with bat_life */
+    margin-right: 8px;
+    background: @bg-alt;
+    min-height: 20px;    
+    border-radius: 4px;
+}
+
+.bright_slider highlight {
+    background: @warning;
+    border-radius: 4px;
+}
+
+.bright_slider slider {
+    box-shadow: none;
+    min-width: 8px;
+    min-height: 8px;
+    border: none;
+    background: none;
+    color: none;
+}
+
+.hbox3 {
+
+}
+
+.vol_icon {
+    font-size: 24px;
+    padding: 0px 8px;
+    margin-left: -2px; /* offset nerd icon */
+    color: @secondary;
+}
+
+.vol_slider trough {
+    margin-left: 9px; /* line up with bat_life */
+    margin-right: 8px;
+    background: @bg-alt;
+    min-height: 20px;    
+    border-radius: 4px;
+}
+
+.vol_slider highlight {
+    background: @secondary;
+    border-radius: 4px;
+}
+
+.vol_slider slider {
+    box-shadow: none;
+    min-width: 8px;
+    min-height: 8px;
+    border: none;
+    background: none;
+    color: none;
+}
